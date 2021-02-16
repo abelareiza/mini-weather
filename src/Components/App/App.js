@@ -40,7 +40,7 @@ function App() {
             <div className='date'>{date.toDateString()}</div>
           </div>
           <div className='temp-box'>
-            <div className='temp'>Temp: {weather.main.temp.toFixed(1)}°</div>
+            <div className='temp'>{weather.main.temp.toFixed(1)}°</div>
             <div className='feels-like'>Feels like: {weather.main.feels_like.toFixed(1)}°</div>
           </div>
           <div className='weather-box'>
