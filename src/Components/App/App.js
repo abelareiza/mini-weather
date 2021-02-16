@@ -30,7 +30,7 @@ function App() {
         <input
           type='text'
           className='search-bar'
-          placeholder='Location'
+          placeholder='Search a place'
           onChange={e => setQuery(e.target.value)}
           value={query}
           onKeyPress={search}
@@ -57,12 +57,14 @@ function App() {
         <div className='openweather-logo'></div>
         <div className='author'>Developed by Abel Areiza</div>
         <div className='social-media'>
-          <div className='linkedin'><span></span>/abel-areiza</div>
-          <div className='github'><span></span>/abelareiza</div>
-          <div className='twitter'><span></span>@Enjuavel</div>
+          <ul>
+            <li className='github'><a href='https://github.com/abelareiza'><span></span>/abelareiza</a></li>
+            <li className='linkedin'><a href='https://www.linkedin.com/in/abel-areiza/'><span></span>/abel-areiza</a></li>
+            <li className='twitter'><a href='https://twitter.com/Enjuavel/'><span></span>@Enjuavel</a></li>
+          </ul>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 

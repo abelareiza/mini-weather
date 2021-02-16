@@ -26,7 +26,7 @@ html {
 
 .warm {
   /* background-image: linear-gradient(to top, #ff5858 0%, #f09819 100%); */
-  background-color: #FFB042;
+  background-color: #FFBB5C;
 }
 
 .cold {
@@ -36,7 +36,7 @@ html {
 
 .App .header {
   display: flex;
-  background-color: #333333;
+  background-color: #2F2E2B;
   height: 72px;
   width: 100vw;
   justify-content: center;
@@ -46,8 +46,10 @@ html {
 
 .App .header .header-logo {
   color: #FAF6E9;
+  font-family: 'Poppins', sans-serif;
   font-size: 3.6rem;
   font-weight: 700;
+  letter-spacing: 0.08em;
 }
 
 .App .search-box {
@@ -62,20 +64,29 @@ html {
   height: 3.2rem;
   border-radius: 4px;
   padding-left: 1rem;
-  background-color: rgba( 51, 51, 51, 0.25 );
+  background-color: rgba( 47, 46, 43, 0.25 );
   color: #FAF6E9;
 }
 
 .App .search-box ::-webkit-input-placeholder{
   color: #FAF6E9;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 300;
 }
 
 .App .search-box ::-moz-placeholder{
   color: #FAF6E9;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 300;
 }
 
 .App .search-box ::placeholder{
   color: #FAF6E9;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 300;
 }
 
 .App .results-box {
@@ -89,8 +100,10 @@ html {
 }
 
 .App .results-box .location-box{
-  height: 40%;
-  width: 80%;
+  min-width: 280px;
+  width: 60%;
+  max-width: 320px;
+  height: 272px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,7 +114,7 @@ html {
   backdrop-filter: blur( 4px );
   -webkit-backdrop-filter: blur( 4px );
   border-radius: 8px;
-  color: #FAF6E9; 
+  color: #2F2E2B; 
 }
 
 .App .results-box .location-box .date {
@@ -111,14 +124,16 @@ html {
 }
 
 .App .results-box .location-box .location {
-  font-size: 3.2rem;
-  line-height: 3.8rem;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
   font-weight: 700;
 }
 
 .App .results-box .temp-box{
-  height: 40%;
-  width: 80%;
+  min-width: 280px;
+  width: 60%;
+  max-width: 320px;
+  height: 272px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -129,7 +144,7 @@ html {
   backdrop-filter: blur( 4px );
   -webkit-backdrop-filter: blur( 4px );
   border-radius: 8px;
-  color: #FAF6E9;
+  color: #2F2E2B;
 }
 
 .App .results-box .temp-box .temp-subtitle {
@@ -151,8 +166,10 @@ html {
 }
 
 .App .results-box .weather-box{
-  height: 40%;
-  width: 80%;
+  min-width: 280px;
+  width: 60%;
+  max-width: 320px;
+  height: 272px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -166,19 +183,19 @@ html {
   font-size: 2.6rem;
   line-height: 3.2rem;
   font-weight: 500;
-  color: #FAF6E9;
+  color: #2F2E2B;
 }
 
 .App .results-box .weather-box .weather {
-  font-size: 1.6rem;
-  line-height: 2rem;
-  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  font-weight: 400;
 }
 
 .App .footer {
   display: grid;
   grid-template: 1fr / repeat(3, 1fr);
-  background-color: #333333;
+  background-color: #2F2E2B;
   height: 144px;
   width: 100vw;
   grid-row: 4/5;
@@ -211,8 +228,20 @@ html {
   align-items: center;
   grid-column: 3/4;
   font-size: 1.6rem;
-  line-height: 2rem;
   font-weight: 300;
+}
+
+.App .footer .social-media ul{
+  list-style-type: none;
+}
+
+.App .footer .social-media li{
+  margin-bottom: 4px;
+}
+
+.App .footer .social-media a{
+  text-decoration: none;
+  color: inherit;
 }
 
 .App .footer .social-media .linkedin span{
