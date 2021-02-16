@@ -13,10 +13,11 @@ html {
   background-color: #FAF6E9;
   background-repeat: no-repeat;
   background-size: cover;
+  color: #FAF6E9;
   height: 100vh;
   width: 100vw;
   display: grid;
-  grid-template: 15vh 85vh / 1fr;
+  grid-template: 72px 15vh auto 144px / 1fr;
   align-items: center;
   justify-items: center;
   font-family: 'Roboto', sans-serif;
@@ -25,7 +26,7 @@ html {
 
 .warm {
   /* background-image: linear-gradient(to top, #ff5858 0%, #f09819 100%); */
-  background-color: #ffba5a;
+  background-color: #FFB042;
 }
 
 .cold {
@@ -33,8 +34,24 @@ html {
   background-color: #765aff;
 }
 
-.App .search-box {
+.App .header {
+  display: flex;
+  background-color: #333333;
+  height: 72px;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
   grid-row: 1/2;
+}
+
+.App .header .header-logo {
+  color: #FAF6E9;
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+
+.App .search-box {
+  grid-row: 2/3;
   grid-column: 1/3;
 }
 
@@ -45,11 +62,26 @@ html {
   height: 3.2rem;
   border-radius: 4px;
   padding-left: 1rem;
+  background-color: rgba( 51, 51, 51, 0.25 );
+  color: #FAF6E9;
+}
+
+.App .search-box ::-webkit-input-placeholder{
+  color: #FAF6E9;
+}
+
+.App .search-box ::-moz-placeholder{
+  color: #FAF6E9;
+}
+
+.App .search-box ::placeholder{
+  color: #FAF6E9;
 }
 
 .App .results-box {
   height: 100%;
   width: 100%;
+  grid-row: 3/4;
   display: grid;
   grid-template: 1fr / repeat(3, 1fr);
   align-items: center;
@@ -69,10 +101,19 @@ html {
   backdrop-filter: blur( 4px );
   -webkit-backdrop-filter: blur( 4px );
   border-radius: 8px;
-  font-size: 2.6rem;
-  line-height: 3.2rem;
-  font-weight: 500;
-  color: #FAFAFA; 
+  color: #FAF6E9; 
+}
+
+.App .results-box .location-box .date {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 300;
+}
+
+.App .results-box .location-box .location {
+  font-size: 3.2rem;
+  line-height: 3.8rem;
+  font-weight: 700;
 }
 
 .App .results-box .temp-box{
@@ -88,10 +129,25 @@ html {
   backdrop-filter: blur( 4px );
   -webkit-backdrop-filter: blur( 4px );
   border-radius: 8px;
+  color: #FAF6E9;
+}
+
+.App .results-box .temp-box .temp-subtitle {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 300;
+}
+
+.App .results-box .temp-box .temp{
   font-size: 3.2rem;
   line-height: 3.8rem;
-  font-weight: 500;
-  color: #FAFAFA; 
+  font-weight: 700;
+}
+
+.App .results-box .temp-box .feels-like {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 300;
 }
 
 .App .results-box .weather-box{
@@ -110,5 +166,84 @@ html {
   font-size: 2.6rem;
   line-height: 3.2rem;
   font-weight: 500;
-  color: #FAFAFA;
+  color: #FAF6E9;
+}
+
+.App .results-box .weather-box .weather {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 300;
+}
+
+.App .footer {
+  display: grid;
+  grid-template: 1fr / repeat(3, 1fr);
+  background-color: #333333;
+  height: 144px;
+  width: 100vw;
+  grid-row: 4/5;
+}
+
+.App .footer .openweather-logo{ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../assets/images/openweather-logo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  grid-column: 1/2;
+}
+
+.App .footer .author{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 2/3;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 300;
+}
+
+.App .footer .social-media{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-column: 3/4;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 300;
+}
+
+.App .footer .social-media .linkedin span{
+  display: inline-block;
+  margin-right: 8px;
+  width: 12px;
+  height: 12px;
+  background-image: url('../../assets/logos/linkedin-logo.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  backface-visibility: visible;
+}
+
+.App .footer .social-media .github span{
+  display: inline-block;
+  margin-right: 8px;
+  width: 12px;
+  height: 12px;
+  background-image: url('../../assets/logos/github-logo.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  backface-visibility: visible;
+}
+
+.App .footer .social-media .twitter span{
+  display: inline-block;
+  margin-right: 8px;
+  width: 12px;
+  height: 12px;
+  background-image: url('../../assets/logos/twitter-logo.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  backface-visibility: visible;
 }
