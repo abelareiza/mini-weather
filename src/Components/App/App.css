@@ -21,7 +21,7 @@ html {
   align-items: center;
   justify-items: center;
   font-family: 'Roboto', sans-serif;
-  transition: .8s ease-out;
+  transition: .5s ease-in;
 }
 
 .warm {
@@ -187,9 +187,10 @@ html {
 }
 
 .App .results-box .weather-box .weather {
-  font-size: 1.8rem;
-  line-height: 2.2rem;
-  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 300;
+  margin-bottom: 8px;
 }
 
 .App .footer {

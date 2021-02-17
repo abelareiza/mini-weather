@@ -39,17 +39,26 @@ function App() {
       {(typeof weather.main == 'undefined') ? ('') : (
         <div className='results-box'>
           <div className='location-box'>
-            <div className='date'>{date.toDateString()}</div>
-            <div className='location'>{weather.name}, {weather.sys.country}</div>
+            <div className='location-info'>
+              <div className='date'>{`
+              ${date.toLocaleDateString('en-us', { weekday: 'long' })},  
+              ${date.toLocaleDateString('en-us', { day: '2-digit' })} 
+              ${date.toLocaleDateString('en-us', { month: 'short' })} 
+              ${date.toLocaleDateString('en-us', { year: 'numeric' })}
+              `}</div>
+              <div className='location'>{weather.name}, {weather.sys.country}</div>
+            </div>
           </div>
           <div className='temp-box'>
-            <div className='temp-subtitle'>Currently</div>
-            <div className='temp'>{weather.main.temp.toFixed(1)}°c</div>
-            <div className='feels-like'>Feels like {weather.main.feels_like.toFixed(1)}°</div>
+            <div className='temp-info'>
+              <div className='temp-subtitle'>Currently</div>
+              <div className='temp'>{weather.main.temp.toFixed(1)}°c</div>
+              <div className='feels-like'>Feels like {weather.main.feels_like.toFixed(1)}°</div>
+            </div>
           </div>
           <div className='weather-box'>
             <div className='weather'>{weather.weather[0].main}</div>
-            <img src={`http://openweathermap.org/img/w/${weather.weather[0].icon}.png`} />
+            <img src={`icons/${weather.weather[0].icon}.png`} />
           </div>
         </div>
       )}
