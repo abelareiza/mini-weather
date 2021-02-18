@@ -9,10 +9,7 @@ html {
 }
 
 .App {
-  /* background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%); */
   background-color: #FAF6E9;
-  background-repeat: no-repeat;
-  background-size: cover;
   color: #FAF6E9;
   height: 100vh;
   width: 100vw;
@@ -213,6 +210,7 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   grid-column: 1/2;
+  transition: .5s ease-in;
 }
 
 .App .footer .author{
@@ -279,4 +277,56 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   backface-visibility: visible;
+}
+
+@media only screen and (max-width: 1020px) {
+  .App {
+    min-height: 100vh;
+    height: auto;
+    grid-template: 72px 15vh auto 224px / 1fr;
+  }
+
+  .App .results-box {
+    grid-template: repeat(3, 1fr) / 1fr;
+    row-gap: 32px;
+  }
+
+  .App .results-box .location-box{
+    justify-self: center;
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+
+  .App .results-box .temp-box{
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+
+  .App .results-box .weather-box{
+    justify-self: center;
+    grid-row: 3/4;
+    grid-column: 1/2;
+    margin-bottom: 48px;
+  }
+
+  .App .footer {
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    height: 224px;
+  }
+
+  .App .footer .openweather-logo{ 
+    background-image: url('../../assets/images/openweather-logo-mobile.png');
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  .App .footer .author{
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  
+  .App .footer .social-media{
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
 }
