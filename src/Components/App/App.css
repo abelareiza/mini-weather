@@ -62,6 +62,7 @@ html {
   outline: 0;
   font-size: 1.6rem;
   height: 3.2rem;
+  width: 280px;
   border-radius: 4px;
   padding-left: 1rem;
   background-color: rgba( 47, 46, 43, 0.25 );
@@ -100,6 +101,7 @@ html {
 }
 
 .App .results-box .location-box{
+  justify-self: end;
   min-width: 280px;
   width: 60%;
   max-width: 320px;
@@ -166,6 +168,7 @@ html {
 }
 
 .App .results-box .weather-box{
+  justify-self: start;
   min-width: 280px;
   width: 60%;
   max-width: 320px;
