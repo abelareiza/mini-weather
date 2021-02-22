@@ -288,13 +288,13 @@ html {
 
   .App .results-box {
     grid-template: repeat(3, 1fr) / 1fr;
-    row-gap: 32px;
   }
 
   .App .results-box .location-box{
     justify-self: center;
     grid-row: 1/2;
     grid-column: 1/2;
+    margin: 48px auto 16px auto;
   }
 
   .App .results-box .temp-box{
@@ -306,7 +306,7 @@ html {
     justify-self: center;
     grid-row: 3/4;
     grid-column: 1/2;
-    margin-bottom: 48px;
+    margin: 16px auto 48px auto;
   }
 
   .App .footer {
