@@ -1,10 +1,10 @@
 ### mini weather 🌤
 #### mini weather is a React app that allows you to check the weather and temperature anywhere!
-#### You can try it right now in https://mini-weather.surge.sh
+#### You can try it right now at https://mini-weather.surge.sh
 
 ![mini weather is a React app that allows you to check the weather and temperature anywhere!](https://github.com/abelareiza/mini-weather/blob/main/mini-weather_mockup.png)
 
-This project was made for fun and to apply some React JS concepts.
+This project was made for fun and to apply some React concepts.
 
 Technologies used for this project: HTML / CSS / JS / React ⚛
 
